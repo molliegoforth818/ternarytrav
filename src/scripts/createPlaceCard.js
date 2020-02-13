@@ -1,13 +1,13 @@
 const createPlaceOfInterestCard = place => `
 <section class="place--${place.id}">
-<header class="__title">
-    ${recipe.title}
+<header class="__name">
+    ${place.name}
 </header>
-<div class="recipe__instructions">
-    ${recipe.instructions}
+<div class="place_interest">
+    ${name.interest}
 </div>
-<button id="editRecipe--${recipe.id}">
+<button id="edit Place--${place.id}">
     Edit Recipe
 </button>
-<button id="deleteRecipe--${recipe.id}" class="deleteBtn">Delete</button>
+<button id="delete Place--${place.id}" class="deleteBtn">Delete</button>
 </section>`
