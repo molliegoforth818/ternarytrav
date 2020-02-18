@@ -1,8 +1,12 @@
-const createPlaceOfInterestCard = interest => `
-<h1 id="__name">${interest.name}</h1>
-<p id="interest_description"> ${interest.description}</p>
-<p id="interest_cost"> ${interest.cost}</p>
- <button id=dropdown> ${places.name}</button>
-<button id="edit Place">Edit Place</button> <button id="delete Place">Delete Place</button>
-`;
+const createPlaceOfInterestCard = (pointofInterest) => {
+    return `
+    <section class="interest">
+    <h4>${pointOfInterest.name}</h4>
+    <p>${pointOfInterest.description}</p>
+    <p class="cost">Cost: $${pointOfInterest.cost}</p>
+    <p class="review">Review: ${pointOfInterest.review}</p>
+    <button id="deleteButton--${pointOfInterest.id}">Delete</button>
+    <button id="editButton--${pointOfInterest.id}">Edit</button>
+    `
+}
 export default createPlaceOfInterestCard

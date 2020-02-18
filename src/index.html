@@ -10,17 +10,55 @@
     
     <form>
         <fieldset>
-        <h1 id="_name"></h1>
-        <p id="interest_description"></p>
-        <p id="interest_cost"></p>
-        <div id="dropdown">
-        <button id="dropbtn">dropdown</button>
-    </div>
-        <button id="edit_Place">Edit Place</button><button id="delete_Place">Delete</button>
-    </fieldset>
+            <legend>Add Point of Interest</legend>
+            <input type="hidden" id="hiddenInput" value="" />
+
+            <label for="placeId">Select a Place</label>
+            <select id="placeId" name="placeId">
+                <option value="italy">Italy</option>
+                <option value="switzerland">Switzerland</option>
+                <option value="france">France</option>
+            </select>
+        
+            <label for="interestName">Name</label>
+            <input type="text" name="interestName" id="interestName">
+        
+            <label for="interestDescription">Description</label>
+            <input type="text" name="interestDescription" id="interestDescription">
+        
+            <label class="toEdit hidden" for="interestCost">Cost</label>
+            <input class="toEdit hidden" type="text" name="interestCost" id="interestCost">
+
+            <label class="toEdit hidden" for="interestReview">Review</label>
+            <input class="toEdit hidden" type="text" name="interestReview" id="interestReview">
+            
+        </fieldset>
     </form>
+    <button id="submitButton">Submit</button>
+        <button id="saveButton" class="toEdit hidden">Save</button>
+    </div>
+    <section class="output">
+        <article id="italy">
+            <h2>Italy</h2>
+            <div id="italyPoints">
+            
+            </div>
+        </article>
+        <article id="switzerland">
+            <h2>Switzerland</h2>
+            <div id="switzerlandPoints">
+
+            </div>
+        </article>
+        <article id="france">
+            <h2>France</h2>
+            <div id="francePoints">
+
+            </div>
+        </article>
+    </section>
     <article id=output></article>
-    <script src = /scripts/main.js></script>
+    <script type=module src = /scripts/main.js></script>
     
 </body>
 </html>
